@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PAVL | My Simple Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header, footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+    }
+    h1 { color: #0066cc; margin-bottom: 0.3rem; }
+    h2 { color: #444; }
+    .content {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .tagline {
+      font-size: 0.95rem;
+      color: #666;
+    }
+    .section {
+      margin-top: 1.5rem;
+    }
+    .badges span {
+      display: inline-block;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      border-radius: 999px;
+      background: #e0ecff;
+      color: #004a99;
+    }
+    .screenshot {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .screenshot img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    code {
+      background: #f0f0f0;
+      padding: 0.15rem 0.3rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to PAVL Site</h1>
+    <div class="tagline">Static HTML • Docker • Kubernetes • DevOps Practice</div>
+  </header>
+
+  <div class="content">
+    <div class="section">
+      <h2>About this page</h2>
+      <p>Hello 👋 This is a simple static HTML page running on my Kubernetes cluster.</p>
+      <p>
+        The file is <code>index.html</code>, baked into a Docker image
+        <code>pavlmark/mysite</code> and deployed as a Pod in the cluster.
+      </p>
+      <div class="badges">
+        <span>✅ Runs in Docker</span>
+        <span>✅ Deployed to Kubernetes</span>
+        <span>✅ Managed from GitHub</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Tech stack</h2>
+      <ul>
+        <li>HTML + CSS (created by ChatGPT)</li>
+        <li>Docker image: <code>pavlmark/mysite</code></li>
+        <li>Kubernetes Deployment + Service and Ingress</li>
+        <li>Plan: Helm chart + GitOps (Argo CD)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>How this site is deployed</h2>
+      <ol>
+        <li>Edit <code>index.html</code> locally</li>
+        <li>Build &amp; push Docker image to Docker Hub</li>
+        <li>Update Deployment in Kubernetes to use the new image tag</li>
+      </ol>
+    </div>
+
+    <div class="section screenshot">
+      <!-- Later you can add a real screenshot -->
+      <p><em>Here you can place a screenshot or logo image later.</em></p>
+      <!-- Example image tag:
+      <img src="mysite-screenshot.png" alt="My site screenshot" />
+      -->
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> PAVL Site · Powered by Docker &amp; Kubernetes
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
