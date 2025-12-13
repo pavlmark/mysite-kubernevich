@@ -30,7 +30,7 @@ spec:
         app: mysite-deployment
     spec:
       containers:
-      - image: pavlmark/mysite:v3
+      - image: pavlmark/mysite:v4.0.1
         imagePullPolicy: IfNotPresent
         name: mysite
         resources: {}
@@ -38,11 +38,18 @@ spec:
         terminationMessagePolicy: File
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: data
+          mountPath: /mnt/k8s-data/myapp
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: mysite-pvc  
 status:
   availableReplicas: 3
   conditions:
