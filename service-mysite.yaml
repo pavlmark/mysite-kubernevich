@@ -18,7 +18,7 @@ spec:
 #  name: mysite-service
 #  namespace: mysite
 #spec:
-#  # type by default is ClusterIP, you can don't enter name od service if it ClusterIP
+#   #The default type is ClusterIP. If it's ClusterIP, you don't need to specify a service name.
 #  type: ClusterIP
 #  selector:
 #    app: mysite 
