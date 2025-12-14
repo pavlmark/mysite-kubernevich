@@ -12,4 +12,17 @@ spec:
       port: 80
       targetPort: 80
       nodePort: 30010
-
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: mysite-service
+#  namespace: mysite
+#spec:
+#  # type by default is ClusterIP, you can don't enter name od service if it ClusterIP
+#  type: ClusterIP
+#  selector:
+#    app: mysite 
+#  ports:
+#    - name: http
+#      port: 80  # Service port 
+#      targetPort: 80  # Port inside container 
