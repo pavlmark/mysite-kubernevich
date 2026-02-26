@@ -18,3 +18,10 @@ spec:
         image: pavlmark/mysite:v4.0.1
         ports:
         - containerPort: 80
+      resources:
+        requests:
+          memory: "12Mi"
+          cpu: "20m"
+        limits:
+          memory: "128Mi"
+          cpu: "300m"
