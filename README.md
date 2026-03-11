@@ -1,1 +1,1 @@
-[200~This is my first Kubernetes project. There is a cluster, control plane node and two worker nodes. All nodes launched in VMBox, in Ubuntu Desktop 24.04. This project is simple html page created by ChatGPT, and launched in my Kubernetes cluster.
+This is my first Kubernetes project. There is a cluster, control plane node and two worker nodes. All nodes launched in VMBox, in Ubuntu Desktop 24.04. This project is simple html page created by ChatGPT, and launched in my Kubernetes cluster.
